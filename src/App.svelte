@@ -88,7 +88,7 @@
       <span>残り時間</span>
       <input type="time" bind:value={waitTimeAnswer} step="1" />
     </label>
-    <button on:click={resultScheduleDate}>変換</button>
+    <button type="button" on:click={resultScheduleDate}>変換</button>
     <p class="result-card">予定日時(現地時刻): {localSceduleDate}</p>
   </form>
   <hr />
@@ -98,7 +98,9 @@
       <div>
         <label for="original-datetime-input">
           <span>{CurrentConvertOption.label}</span>
-          <button on:click={inversion} class="convert-button">反転</button>
+          <button type="button" on:click={inversion} class="convert-button"
+            >反転</button
+          >
         </label>
         <input
           id="original-datetime-input"
@@ -108,7 +110,7 @@
         />
       </div>
     </div>
-    <button on:click={convert}>変換</button>
+    <button type="button" on:click={convert}>変換</button>
     <p class="result-card">変換後日時: {convertedDateTime}</p>
   </form>
 </main>
