@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Temporal } from "temporal-polyfill";
-  import { formatZoned, formatZonedInternational } from "../lib/util";
+  import { formatZoned, formatZonedInternational } from "./lib/util";
 
   const localTimezone = Temporal.Now.timeZoneId();
   const utcTimezone = "Etc/GMT";
