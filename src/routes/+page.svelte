@@ -89,7 +89,7 @@
       <input type="time" bind:value={waitTimeAnswer} step="1" />
     </label>
     <button on:click={resultScheduleDate}>変換</button>
-    <p>予定日時(現地時刻):{localSceduleDate}</p>
+    <p class="result-card">予定日時(現地時刻): {localSceduleDate}</p>
   </form>
   <hr />
   <form>
@@ -97,7 +97,7 @@
     <div>
       <div>
         <label for="original-datetime-input">
-          <span>{CurrentConvertOption.label}:</span>
+          <span>{CurrentConvertOption.label}</span>
           <button on:click={inversion}>反転</button>
         </label>
         <input
@@ -109,25 +109,58 @@
       </div>
     </div>
     <button on:click={convert}>変換</button>
-    <p>変換後日時: {convertedDateTime}</p>
+    <p class="result-card">変換後日時: {convertedDateTime}</p>
   </form>
 </main>
 
 <style>
   main {
-    font-size: 18px;
-  }
-
-  main {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    width: min(450px, 100%);
+    margin-inline: auto;
+    height: 100%;
+    padding: 3px 7px;
   }
   main form {
     display: flex;
     flex-direction: column;
+    gap: 5px;
   }
 
   main form input {
     width: 100%;
+  }
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #f7f7f7;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  button {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    background-color: #3535bd;
+    color: white;
+    font-weight: bold;
+  }
+
+  .result-card {
+    margin-top: 10px;
+    border: #f7f7f7 solid 1px;
+    padding: 3px 7px;
+    border-radius: 5px;
   }
 </style>
