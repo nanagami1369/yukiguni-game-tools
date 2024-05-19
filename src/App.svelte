@@ -79,7 +79,8 @@
 
 <main>
   <form>
-    <h1>残り時間→予定日時</h1>
+    <h1>某雪国ゲーム用ツール</h1>
+    <h2>残り時間→予定日時</h2>
     <label>
       <span>残り日数</span>
       <input type="number" bind:value={waitDayAnswer} min="0" step="1" />
@@ -93,7 +94,7 @@
   </form>
   <hr />
   <form>
-    <h1>現地時刻⇔UTC変換</h1>
+    <h2>現地時刻⇔UTC変換</h2>
     <div>
       <div>
         <label for="original-datetime-input">
@@ -138,7 +139,6 @@
   h1 {
     display: inline-block;
     position: relative;
-    margin-bottom: 1rem;
   }
   h1::after {
     content: "";
@@ -149,6 +149,10 @@
     background-color: #f7f7f7;
     bottom: 0px;
     left: 0px;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
   }
 
   button {
