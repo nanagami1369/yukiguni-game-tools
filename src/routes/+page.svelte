@@ -98,7 +98,7 @@
       <div>
         <label for="original-datetime-input">
           <span>{CurrentConvertOption.label}</span>
-          <button on:click={inversion}>反転</button>
+          <button on:click={inversion} class="convert-button">反転</button>
         </label>
         <input
           id="original-datetime-input"
@@ -162,5 +162,9 @@
     border: #f7f7f7 solid 1px;
     padding: 3px 7px;
     border-radius: 5px;
+  }
+
+  .convert-button {
+    background-color: #637ffc;
   }
 </style>
