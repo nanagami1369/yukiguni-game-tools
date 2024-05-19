@@ -80,6 +80,10 @@
 <main>
   <form>
     <h1>某雪国ゲーム用ツール</h1>
+    <a
+      href="https://raw.githubusercontent.com/nanagami1369/yukiguni-game-tools/main/ThirdPartyNotices.txt"
+      >サードパーティライセンス</a
+    >
     <h2>残り時間→予定日時</h2>
     <label>
       <span>残り日数</span>
@@ -134,6 +138,16 @@
 
   main form input {
     width: 100%;
+  }
+
+  a {
+    color: #f7f7f7;
+  }
+  a:hover {
+    color: #fdff80;
+  }
+  a:active {
+    color: #ffd621;
   }
 
   h1 {
