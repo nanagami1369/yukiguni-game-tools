@@ -80,10 +80,6 @@
 <main>
   <form>
     <h1>某雪国ゲーム用ツール</h1>
-    <a
-      href="https://raw.githubusercontent.com/nanagami1369/yukiguni-game-tools/main/ThirdPartyNotices.txt"
-      >サードパーティライセンス</a
-    >
     <h2>残り時間→予定日時</h2>
     <label>
       <span>残り日数</span>
@@ -118,6 +114,13 @@
     <button type="button" on:click={convert}>変換</button>
     <p class="result-card">変換後日時: {convertedDateTime}</p>
   </form>
+  <footer>
+    <hr />
+    <a
+      href="https://raw.githubusercontent.com/nanagami1369/yukiguni-game-tools/main/ThirdPartyNotices.txt"
+      >使用した外部ライブラリーの著作権情報</a
+    >
+  </footer>
 </main>
 
 <style>
@@ -186,5 +189,17 @@
 
   .convert-button {
     background-color: #637ffc;
+  }
+
+  hr {
+    border-color: #f7f7f7;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 10px;
+    flex: 1 1 auto;
   }
 </style>
