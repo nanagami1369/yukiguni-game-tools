@@ -116,10 +116,7 @@
   </form>
   <footer>
     <hr />
-    <a
-      href="https://raw.githubusercontent.com/nanagami1369/yukiguni-game-tools/main/ThirdPartyNotices.txt"
-      >使用した外部ライブラリーの著作権情報</a
-    >
+    <a href="ThirdPartyNotices.txt">使用した外部ライブラリーの著作権情報</a>
   </footer>
 </main>
 
