@@ -4,7 +4,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
-  base: 'yukiguni-game-tools',
+  base: '/yukiguni-game-tools',
   build: {
     outDir: "./docs",
   }
