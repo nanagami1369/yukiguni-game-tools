@@ -1,6 +1,10 @@
 <script lang="ts">
   import { Temporal } from "temporal-polyfill";
-  import { formatZoned, formatZonedInternational } from "./lib/util";
+  import {
+    formatGoogleCalenderUrl,
+    formatZoned,
+    formatZonedInternational,
+  } from "./lib/util";
 
   const localTimezone = Temporal.Now.timeZoneId();
   const utcTimezone = "Etc/GMT";
@@ -9,6 +13,8 @@
   let waitTimeAnswer = "00:00:00";
 
   let localScheduleDate = "";
+
+  let addScheduleUrlByGoogleCalender = "";
 
   function resultScheduleDate() {
     const waitTime = Temporal.PlainTime.from(waitTimeAnswer);
@@ -21,6 +27,7 @@
     let scheduleDate = Temporal.Now.zonedDateTimeISO();
     scheduleDate = scheduleDate.add(duration);
     localScheduleDate = formatZoned(scheduleDate);
+    addScheduleUrlByGoogleCalender = formatGoogleCalenderUrl(scheduleDate);
   }
 
   //ここから現地時間⇔UTC =======================================
@@ -90,7 +97,15 @@
       <input type="time" bind:value={waitTimeAnswer} step="1" />
     </label>
     <button type="button" on:click={resultScheduleDate}>変換</button>
-    <p class="result-card">予定日時(現地時刻): {localScheduleDate}</p>
+    <p class="result-card">
+      <span>予定日時(現地時刻): {localScheduleDate}</span><br />
+      <span>
+        Googleカレンダーに追加: {#if addScheduleUrlByGoogleCalender != ""}<a
+            href={addScheduleUrlByGoogleCalender}>ここから</a
+          >{/if}
+      </span>
+    </p>
+    <p class="result-card"></p>
   </form>
   <hr />
   <form>
