@@ -101,7 +101,9 @@
       <span>予定日時(現地時刻): {localScheduleDate}</span><br />
       <span>
         Googleカレンダーに追加: {#if addScheduleUrlByGoogleCalender != ""}<a
-            href={addScheduleUrlByGoogleCalender}>ここから</a
+            href={addScheduleUrlByGoogleCalender}
+            target="_blank"
+            rel="noopener">ここから</a
           >{/if}
       </span>
     </p>
