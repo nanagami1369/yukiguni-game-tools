@@ -8,7 +8,7 @@
   let waitDayAnswer = 0;
   let waitTimeAnswer = "00:00:00";
 
-  let localSceduleDate = "";
+  let localScheduleDate = "";
 
   function resultScheduleDate() {
     const waitTime = Temporal.PlainTime.from(waitTimeAnswer);
@@ -20,7 +20,7 @@
     });
     let scheduleDate = Temporal.Now.zonedDateTimeISO();
     scheduleDate = scheduleDate.add(duration);
-    localSceduleDate = formatZoned(scheduleDate);
+    localScheduleDate = formatZoned(scheduleDate);
   }
 
   //ここから現地時間⇔UTC =======================================
@@ -90,7 +90,7 @@
       <input type="time" bind:value={waitTimeAnswer} step="1" />
     </label>
     <button type="button" on:click={resultScheduleDate}>変換</button>
-    <p class="result-card">予定日時(現地時刻): {localSceduleDate}</p>
+    <p class="result-card">予定日時(現地時刻): {localScheduleDate}</p>
   </form>
   <hr />
   <form>
